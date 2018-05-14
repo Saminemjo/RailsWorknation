@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to WorkNation, <%= @request.name %></h1>
+    <p>
+      You have successfully signed up to the waiting list to join our great coworking station.<br>
+    </p>
+    <p>
+      To confirm your email and complete your subscription, just follow this link:
+      <%=  link_to "confirm", confirm_email_url(@request.confirm_token, host: @url)%>.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>

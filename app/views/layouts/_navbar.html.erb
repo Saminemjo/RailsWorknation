@@ -1,0 +1,20 @@
+<nav class="home-nav" role="navigation">
+  <div class="container-wrap">
+    <div class="top-menu">
+      <div class="row">
+        <div class="col-xs-2">
+          <div id="home-logo"><a href="<%= root_path %>">WorkNation</a></div>
+        </div>
+        <div class="col-xs-10 text-right menu-1">
+          <ul>
+            <li class="<%= 'active' if current_page?(root_path) %>"><a href="<%= root_path %>">Home</a></li>
+            <li class="<%= 'active' if current_page?(prices_path) %>"><a href="<%= prices_path %>">Prices</a></li>
+            <li class="<%= 'active' if current_page?(join_path) || current_page?(new_request_path) %>"><a href="<%= join_path %>">Join</a></li>
+            <li class="<%= 'active' if current_page?(contact_path) %>"><a href="<%= contact_path%>">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</nav>
