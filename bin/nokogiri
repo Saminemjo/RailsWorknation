@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/usr/bin/env ruby2.4
+=======
+#!/usr/bin/env ruby
+>>>>>>> 5a8138380c10433ffb10c5b810e40367148614f6
 # frozen_string_literal: true
 
 #
