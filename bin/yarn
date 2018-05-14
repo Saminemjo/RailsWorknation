@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+#!/usr/bin/env ruby2.4
+=======
 #!/usr/bin/env ruby
+>>>>>>> 5a8138380c10433ffb10c5b810e40367148614f6
 APP_ROOT = File.expand_path('..', __dir__)
 Dir.chdir(APP_ROOT) do
   begin
