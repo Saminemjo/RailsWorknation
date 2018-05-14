@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello <%= @r.name %></h1>
+    <p>
+      Your rank is #<%= @index %> in our Waiting List.<br>
+    </p>
+    <p>
+    To remain in the waiting list please follow the link below before 7 days period, otherwhise your request canceled and removed from the waiting list:
+  <%=  link_to "confirm", confirm_raise_url(@r.confirm_token, host: @url)%>.
+    </p>
+    <p>Have a great day!</p>
+  </body>
+</html>

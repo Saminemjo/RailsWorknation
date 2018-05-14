@@ -1,0 +1,11 @@
+Hello <%= @r.name %>
+===============================================
+
+Your rank is #<%= @index %> in our Waiting List.
+
+Are you still interessed in joining our workstation ?
+
+To remain in the waiting list please follow the link below before 7 days period, otherwhise your request canceled and removed from the waiting list:
+ <%=  link_to "confirm", confirm_raise_url(@r.confirm_token, host: @url)%>.
+
+Have a great day!
