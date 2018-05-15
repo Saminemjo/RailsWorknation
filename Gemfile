@@ -17,6 +17,8 @@ gem 'jquery-rails'
 gem 'bootstrap'
 #email validation gem
 gem 'validate_email'
+#exception_handler gem
+gem 'exception_handler'
 #dev cron gem
 gem 'whenever'
 # Use Uglifier as compressor for JavaScript assets
