@@ -1,3 +1,49 @@
 // Place all the styles related to the errors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.notFound {
+  background-color: white;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.spock {
+  position: relative;
+  -webkit-animation: redBox 5s infinite;
+  -moz-animation: redBox 5s infinite;
+  animation: redBox 5s infinite;
+}
+
+// @-webkit-keyframes redBox {
+//   0% {
+//     left: 100vw
+//   }
+//   50% {
+//     left: 50vw;
+//   }
+//   100% {
+//     left: 0vw;
+//   }
+// }
+// @-moz-keyframes redBox {
+//   0% {
+//     left: 100vw
+//   }
+//   50% {
+//     left: 50vw;
+//   }
+//   100% {
+//     left: 0vw;
+//   }
+// }
+// @keyframes 'redBox' {
+//   0% {
+//     left: 100vw
+//   }
+//   50% {
+//     left: 50vw;
+//   }
+//   100% {
+//     left: 0vw;
+//   }
+// }
