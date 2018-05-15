@@ -14,8 +14,11 @@
  *= require_self
  */
 
- //= link_file style.scss
+
 @import "bootstrap";
+@import 'bootstrap/mixins';
+@import 'bootstrap/variables';
+
 $font-primary: 'Oxygen', sans-serif;
 $font-secondary: 'Source Sans Pro', sans-serif;
 
@@ -112,9 +115,7 @@ $form-group-margin-bottom:       30px !default;
 
 }
 
-// Import
-@import 'bootstrap/mixins';
-@import 'bootstrap/variables';
+
 
 
 
