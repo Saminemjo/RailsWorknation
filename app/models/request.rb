@@ -43,7 +43,7 @@ class Request < ApplicationRecord
       r.send :set_confirmation_token
       r.save(validate: false)
       index = @result.index(r) + 1
-      ConfirmMailer.registration_raise(r.email, r, index).deliver
+      ConfirmMailer.registration_raise(r, index).deliver
     end
   end
 

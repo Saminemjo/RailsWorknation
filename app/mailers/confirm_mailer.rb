@@ -6,11 +6,11 @@ class ConfirmMailer < ApplicationMailer
          subject: 'WorkNation Waiting List subscription')
   end
 
-  def registration_raise(user_email, r, index)
+  def registration_raise(r, index)
     @index = index
     @r = r
     @url = 'https://worknation.herokuapp.com'
-    mail(to: user_email,
+    mail(to: r.email,
          subject: 'Always motived to join WorkNation ?')
   end
 end
