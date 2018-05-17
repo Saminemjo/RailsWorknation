@@ -9,4 +9,3 @@ task send_reminders: :environment do
   Request.registration_raise
   Request.set_to_expired
 end
-For app
