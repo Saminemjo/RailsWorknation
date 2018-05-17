@@ -12,7 +12,7 @@ class Request < ApplicationRecord
   scope :expired, -> { where(expired: 1) }
 
   def self.accept!
-    request = Request.where(accepted: 0).first
+    request = Request.where(accepted: 0).where(expired: 0).where(email_confirmed: 1).first
     request.update(accepted: 1)
   end
 
@@ -37,24 +37,23 @@ class Request < ApplicationRecord
   end
 
   def self.registration_raise
-    request = Request.where('email_confirmed':true).where('accepted':false).where('expired':false).all
+    request = Request.where(email_confirmed: 1).where(accepted: 0).where(expired: 0).all
     @result = request.where('raised_at BETWEEN ? AND ?', 91.days.ago.beginning_of_day, 91.days.ago.end_of_day)
     @result.each do |r|
       r.send :set_confirmation_token
       r.save(validate: false)
-      index = @result.index(r)+1
+      index = @result.index(r) + 1
       ConfirmMailer.registration_raise(r.email, r, index).deliver
     end
   end
 
   def self.set_to_expired
-    withoutConfirm = Request.where('email_confirmed':false).where('created_at < ?',8.days.ago )
-    withoutRaise = Request.where('expired':false).where('accepted':false).where('raised_at < ?',99.days.ago )
-    result= withoutConfirm+withoutRaise
+    withoutConfirm = Request.where(email_confirmed: 0).where('created_at < ?', 8.days.ago)
+    withoutRaise = Request.where(expired: 0).where(accepted: 0).where('raised_at < ?', 99.days.ago)
+    result = withoutConfirm + withoutRaise
     result.each do |r|
-    r.expired = true
-    r.save
+      r.expired = true
+      r.save
     end
   end
-
 end
