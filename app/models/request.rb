@@ -49,9 +49,9 @@ class Request < ApplicationRecord
   end
 
   def self.set_to_expired
-    withoutConfirm = Request.where(email_confirmed: false).where('created_at < ?', 8.days.ago)
-    withoutRaise = Request.where(expired: false).where(accepted: false).where('raised_at < ?', 99.days.ago)
-    result = withoutConfirm + withoutRaise
+    without_confirm = Request.where(email_confirmed: false).where('created_at < ?', 8.days.ago)
+    without_raise = Request.where(expired: false).where(accepted: false).where('raised_at < ?', 99.days.ago)
+    result = without_confirm + without_raise
     result.each do |r|
       r.expired = true
       r.save
