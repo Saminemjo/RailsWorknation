@@ -3,7 +3,7 @@ class Request < ApplicationRecord
   validates :email, presence: true
   validates :biography, presence: true
   validates :email, uniqueness: true, email: true
-  validates :phone, format: { with: /\A(?:\+?\d{1,3}\s*-?)?\(?(?:\d{3})?\)?[- ]?\d{3}[- ]?\d{4}\z/, message: ' Number must have a length of minimum 7 and maximum 13 numbers' }, on: :create
+  validates :phone, format: { with: /\A(?:\+?\d{1,3}\s*-?)?\(?(?:\d{3})?\)?[- ]?\d{3}[- ]?\d{4}\z/, message: ' Number must have a length of minimum 7 and maximum 13 numbers' }
 
   default_scope { order(created_at: :asc) }
   scope :accepted, -> { where(accepted: true) }
