@@ -1,0 +1,68 @@
+Please specify a valid ruby command or the path of a script to run.
+Run 'bin/rails runner -h' for help.
+
+/home/mana/projets/workNation/app/models/request.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :email, presence: true,
+             ^
+/home/mana/projets/workNation/app/models/request.rb:3: Can't assign to true
+idates :email, presence: true,
+                              ^
+/home/mana/projets/workNation/app/models/request.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :biography, presence: true,
+             ^
+/home/mana/projets/workNation/app/models/request.rb:4: Can't assign to true
+es :biography, presence: true,
+                              ^
+/home/mana/projets/workNation/app/models/request.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :email, uniqueness: true, email
+             ^
+/home/mana/projets/workNation/app/models/request.rb:5: Can't assign to true
+ates :email, uniqueness: true, email: true, 
+                              ^
+/home/mana/projets/workNation/app/models/request.rb:5: Can't assign to true
+uniqueness: true, email: true, 
+                              ^
+/home/mana/projets/workNation/app/models/request.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :phone, format: { with: /\A(?:\
+             ^
+/home/mana/projets/workNation/app/models/request.rb:6: syntax error, unexpected ',', expecting keyword_end
+m 7 and maximum 13 numbers' }, on: :create
+                              ^
+Please specify a valid ruby command or the path of a script to run.
+Run 'bin/rails runner -h' for help.
+
+/home/mana/projets/workNation/app/models/request.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :email, presence: true,
+             ^
+/home/mana/projets/workNation/app/models/request.rb:3: Can't assign to true
+idates :email, presence: true,
+                              ^
+/home/mana/projets/workNation/app/models/request.rb:4: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :biography, presence: true,
+             ^
+/home/mana/projets/workNation/app/models/request.rb:4: Can't assign to true
+es :biography, presence: true,
+                              ^
+/home/mana/projets/workNation/app/models/request.rb:5: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :email, uniqueness: true, email
+             ^
+/home/mana/projets/workNation/app/models/request.rb:5: Can't assign to true
+ates :email, uniqueness: true, email: true, 
+                              ^
+/home/mana/projets/workNation/app/models/request.rb:5: Can't assign to true
+uniqueness: true, email: true, 
+                              ^
+/home/mana/projets/workNation/app/models/request.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :phone, format: { with: /\A(?:\
+             ^
+/home/mana/projets/workNation/app/models/request.rb:6: syntax error, unexpected ',', expecting keyword_end
+m 7 and maximum 13 numbers' }, on: :create
+                              ^
+Please specify a valid ruby command or the path of a script to run.
+Run 'bin/rails runner -h' for help.
+
+/home/mana/projets/workNation/app/models/request.rb:59: syntax error, unexpected keyword_end, expecting end-of-input
+Please specify a valid ruby command or the path of a script to run.
+Run 'bin/rails runner -h' for help.
+
+/home/mana/projets/workNation/app/models/request.rb:59: syntax error, unexpected keyword_end, expecting end-of-input
