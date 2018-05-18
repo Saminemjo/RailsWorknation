@@ -44,6 +44,7 @@ class Request < ApplicationRecord
       r.save(validate: false)
       index = @result.index(r) + 1
       ConfirmMailer.registration_raise(r, index).deliver
+      
     end
   end
 

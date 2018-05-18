@@ -50,7 +50,7 @@ class RequestsController < ApplicationController
     request = Request.find_by_confirm_token(params[:token])
      if request
        request.send :validate_email
-       request.save(validate: false)
+       request.save
        redirect_to root_path, success: 'Your email has been confirmed, you are registered to the waiting List. See you soon !'
      else
        redirect_to root_path, danger: "User doesn't exist"
@@ -61,7 +61,7 @@ class RequestsController < ApplicationController
     request = Request.find_by_confirm_token(params[:token])
      if request
        request.send :validate_raise
-       request.save(validate: false)
+       request.save
        redirect_to root_path, success: 'Your request has been confirmed, you are still registered to the waiting List. See you soon !'
      else
        redirect_to root_path, danger: "User doesn't exist"
