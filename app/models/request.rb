@@ -42,7 +42,7 @@ class Request < ApplicationRecord
     @result = request.where('raised_at BETWEEN ? AND ?', 91.days.ago.beginning_of_day, 91.days.ago.end_of_day)
     @result.each do |r|
       r.set_confirmation_token
-      r.save(validate: false)
+      r.save
       index = @result.index(r) + 1
       ConfirmMailer.registration_raise(r, index).deliver
     end
