@@ -38,23 +38,23 @@ class Request < ApplicationRecord
   end
 
   def self.registration_raise
-    request = Request.where(email_confirmed: true).where(accepted: false).where(expired: false).all
-    @result = request.where('raised_at BETWEEN ? AND ?', 91.days.ago.beginning_of_day, 91.days.ago.end_of_day)
-    @result.each do |r|
-      r.set_confirmation_token
-      r.save
-      index = @result.index(r) + 1
-      ConfirmMailer.registration_raise(r, index).deliver
+    results = Request.where(email_confirmed: true).where(accepted: false).where(expired: false).all
+    requests = results.where('raised_at BETWEEN ? AND ?', 91.days.ago.beginning_of_day, 91.days.ago.end_of_day)
+    requests.each do |request|
+      request.set_confirmation_token
+      request.save
+      index = requests.index(request) + 1
+      ConfirmMailer.registration_raise(request, index).deliver
     end
   end
 
   def self.set_to_expired
     without_confirm = Request.where(email_confirmed: false).where('created_at < ?', 8.days.ago)
     without_raise = Request.where(expired: false).where(accepted: false).where('raised_at < ?', 99.days.ago)
-    result = without_confirm + without_raise
-    result.each do |r|
-      r.expired = true
-      r.save
+    requests = without_confirm + without_raise
+    requests.each do |request|
+      request.expired = true
+      request.save
     end
   end
 end
