@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root to: 'pages#index'
   get '/prices', to: 'pages#prices', as: 'prices'
   get '/join', to: 'pages#join', as: 'join'
